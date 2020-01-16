@@ -86,5 +86,11 @@ public class Solution {
         dolphin.fly();
         dolphin.sing();
         dolphin.swim();
+        System.out.println("--------------Butterfly--------------");
+        Animal butterfly = new Butterfly();
+        butterfly.walk();
+        butterfly.fly();
+        butterfly.sing();
+        butterfly.swim();
     }
 }

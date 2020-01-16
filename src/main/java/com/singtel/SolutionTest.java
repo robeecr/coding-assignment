@@ -165,4 +165,16 @@ class SolutionTest {
         dolphin.swim();
         assertEquals("I cannot walk\nI cannot fly\nI cannot sing\nI am swimming\n", outContent.toString());
     }
+    @Test
+    public void butterflyTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Animal butterfly= new Butterfly();
+        butterfly.walk();
+        butterfly.fly();
+        butterfly.sing();
+        butterfly.swim();
+        assertEquals("I cannot walk\nI am flying\nI cannot sing\nI cannot swim\n", outContent.toString());
+    }
 }

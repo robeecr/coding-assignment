@@ -120,4 +120,36 @@ class SolutionTest {
         parrotWithDuck.swim();
         assertEquals("I am walking\nI am flying\nQuack, quack\nI am swimming\n", outContent.toString());
     }
+    @Test
+    public void sharkTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Fish shark = new Shark();
+        shark.walk();
+        shark.fly();
+        shark.sing();
+        shark.swim();
+        shark.size();
+        shark.colour();
+        shark.makeJokes();
+        shark.eat();
+        assertEquals("I cannot walk\nI cannot fly\nI cannot sing\nI am swimming\nI am large\nI am grey\nI don't make jokes\nI eat other fish\n", outContent.toString());
+    }
+    @Test
+    public void clownFishTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Fish clownFish = new Clownfish();
+        clownFish.walk();
+        clownFish.fly();
+        clownFish.sing();
+        clownFish.swim();
+        clownFish.size();
+        clownFish.colour();
+        clownFish.makeJokes();
+        clownFish.eat();
+        assertEquals("I cannot walk\nI cannot fly\nI cannot sing\nI am swimming\nI am small\nI am orange\nI make jokes\nI don't eat other fish\n", outContent.toString());
+    }
 }

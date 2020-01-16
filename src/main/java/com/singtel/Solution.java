@@ -59,6 +59,25 @@ public class Solution {
         parrotWithDuck.fly();
         parrotWithDuck.sing();
         parrotWithDuck.swim();
-
+        System.out.println("--------------Shark--------------");
+        Fish shark = new Shark();
+        shark.walk();
+        shark.fly();
+        shark.sing();
+        shark.swim();
+        shark.size();
+        shark.colour();
+        shark.makeJokes();
+        shark.eat();
+        System.out.println("--------------ClownFish--------------");
+        Fish clownFish = new Clownfish();
+        clownFish.walk();
+        clownFish.fly();
+        clownFish.sing();
+        clownFish.swim();
+        clownFish.size();
+        clownFish.colour();
+        clownFish.makeJokes();
+        clownFish.eat();
     }
 }

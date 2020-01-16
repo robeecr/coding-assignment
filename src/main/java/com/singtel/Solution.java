@@ -1,5 +1,8 @@
 package main.java.com.singtel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Solution {
     public static void main(String[] args) {
         System.out.println("--------------BIRD--------------");
@@ -134,5 +137,30 @@ public class Solution {
         System.out.println("Number of Animals that can walk: " + walkCount);
         System.out.println("Number of Animals that can sing: " + singCount);
         System.out.println("Number of Animals that can swim: " + swimCount);
+        System.out.println("--------------RoosterSounds--------------");
+        Rooster singingRooster = new Rooster();
+        List<String> listOfLanguages = new ArrayList<String>(){{
+            add("English");
+            add("Danish");
+            add("Dutch");
+            add("Finnish");
+            add("French");
+            add("German");
+            add("Greek");
+            add("Hebrew");
+            add("Hungarian");
+            add("Italian");
+            add("Japanese");
+            add("Portuguese");
+            add("Russian");
+            add("Swedish");
+            add("Turkish");
+            add("Urdu");
+            add("Malayalam");
+        }};
+
+        for (String language : listOfLanguages) {
+            singingRooster.sing(language);
+        }
     }
 }

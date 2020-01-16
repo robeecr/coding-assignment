@@ -177,4 +177,17 @@ class SolutionTest {
         butterfly.swim();
         assertEquals("I cannot walk\nI am flying\nI cannot sing\nI cannot swim\n", outContent.toString());
     }
+    @Test
+    public void caterpillarest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Butterfly caterpillar= new Butterfly();
+        caterpillar.setCaterpillar(true);
+        caterpillar.walk();
+        caterpillar.fly();
+        caterpillar.sing();
+        caterpillar.swim();
+        assertEquals("I can walk(crawl)\nI cannot fly\nI cannot sing\nI cannot swim\n", outContent.toString());
+    }
 }

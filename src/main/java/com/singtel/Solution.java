@@ -92,5 +92,12 @@ public class Solution {
         butterfly.fly();
         butterfly.sing();
         butterfly.swim();
+        System.out.println("--------------Caterpillar--------------");
+        Butterfly caterpillar = new Butterfly();
+        caterpillar.setCaterpillar(true);
+        caterpillar.walk();
+        caterpillar.fly();
+        caterpillar.sing();
+        caterpillar.swim();
     }
 }

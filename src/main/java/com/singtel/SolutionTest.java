@@ -152,4 +152,17 @@ class SolutionTest {
         clownFish.eat();
         assertEquals("I cannot walk\nI cannot fly\nI cannot sing\nI am swimming\nI am small\nI am orange\nI make jokes\nI don't eat other fish\n", outContent.toString());
     }
+    @Test
+    public void dolphinTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Dolphin dolphin= new Dolphin();
+        dolphin.hasFishBehaviour(new Shark());
+        dolphin.walk();
+        dolphin.fly();
+        dolphin.sing();
+        dolphin.swim();
+        assertEquals("I cannot walk\nI cannot fly\nI cannot sing\nI am swimming\n", outContent.toString());
+    }
 }

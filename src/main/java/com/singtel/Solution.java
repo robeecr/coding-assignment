@@ -79,5 +79,12 @@ public class Solution {
         clownFish.colour();
         clownFish.makeJokes();
         clownFish.eat();
+        System.out.println("--------------Dolphin--------------");
+        Dolphin dolphin= new Dolphin();
+        dolphin.hasFishBehaviour(new Shark());
+        dolphin.walk();
+        dolphin.fly();
+        dolphin.sing();
+        dolphin.swim();
     }
 }

@@ -68,4 +68,56 @@ class SolutionTest {
         roosterDelegate.swim();
         assertEquals("I am walking\nI cannot fly\nCock-a-doodle-doo\nI am swimming\n", outContent.toString());
     }
+    @Test
+    public void parrotWithDogTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Parrot parrotWithDog = new Parrot();
+        parrotWithDog.livingWithAnimal(new Dog());
+        parrotWithDog.walk();
+        parrotWithDog.fly();
+        parrotWithDog.sing();
+        parrotWithDog.swim();
+        assertEquals("I am walking\nI am flying\nWoof, woof\nI am swimming\n", outContent.toString());
+    }
+    @Test
+    public void parrotWithCatTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Parrot parrotWithCat= new Parrot();
+        parrotWithCat.livingWithAnimal(new Cat());
+        parrotWithCat.walk();
+        parrotWithCat.fly();
+        parrotWithCat.sing();
+        parrotWithCat.swim();
+        assertEquals("I am walking\nI am flying\nMeow\nI am swimming\n", outContent.toString());
+    }
+    @Test
+    public void parrotWithRoosterTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Parrot parrotWithRooster = new Parrot();
+        parrotWithRooster.livingWithAnimal(new Rooster());
+        parrotWithRooster.walk();
+        parrotWithRooster.fly();
+        parrotWithRooster.sing();
+        parrotWithRooster.swim();
+        assertEquals("I am walking\nI am flying\nCock-a-doodle-doo\nI am swimming\n", outContent.toString());
+    }
+    @Test
+    public void parrotWithDuckTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Parrot parrotWithDuck = new Parrot();
+        parrotWithDuck.livingWithAnimal(new Duck());
+        parrotWithDuck.walk();
+        parrotWithDuck.fly();
+        parrotWithDuck.sing();
+        parrotWithDuck.swim();
+        assertEquals("I am walking\nI am flying\nQuack, quack\nI am swimming\n", outContent.toString());
+    }
 }

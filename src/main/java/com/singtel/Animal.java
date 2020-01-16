@@ -1,7 +1,7 @@
 package main.java.com.singtel;
 
-public class Animal {
-    void walk(){
-        System.out.println("I am walking");
-    }
+public interface Animal {
+    void walk();
+    void fly();
+    void sing();
 }

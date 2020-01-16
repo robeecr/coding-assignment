@@ -19,5 +19,18 @@ public class Solution {
         chicken.fly();
         chicken.sing();
         chicken.swim();
+        System.out.println("--------------Rooster--------------");
+        Animal rooster = new Rooster();
+        rooster.walk();
+        rooster.fly();
+        rooster.sing();
+        rooster.swim();
+        System.out.println("--------------RoosterDelegate--------------");
+        Animal roosterDelegate = new RoosterDelegate();
+        roosterDelegate.walk();
+        roosterDelegate.fly();
+        roosterDelegate.sing();
+        roosterDelegate.swim();
+
     }
 }

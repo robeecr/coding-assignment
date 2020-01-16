@@ -44,4 +44,28 @@ class SolutionTest {
         chicken.swim();
         assertEquals("I am walking\nI cannot fly\nCluck, cluck\nI am swimming\n", outContent.toString());
     }
+    @Test
+    public void roosterTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Animal rooster = new Rooster();
+        rooster.walk();
+        rooster.fly();
+        rooster.sing();
+        rooster.swim();
+        assertEquals("I am walking\nI cannot fly\nCock-a-doodle-doo\nI am swimming\n", outContent.toString());
+    }
+    @Test
+    public void roosterDelegateTest(){
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Animal roosterDelegate = new RoosterDelegate();
+        roosterDelegate.walk();
+        roosterDelegate.fly();
+        roosterDelegate.sing();
+        roosterDelegate.swim();
+        assertEquals("I am walking\nI cannot fly\nCock-a-doodle-doo\nI am swimming\n", outContent.toString());
+    }
 }

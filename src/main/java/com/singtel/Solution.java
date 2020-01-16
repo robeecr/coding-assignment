@@ -70,15 +70,15 @@ public class Solution {
         shark.makeJokes();
         shark.eat();
         System.out.println("--------------ClownFish--------------");
-        Fish clownFish = new Clownfish();
-        clownFish.walk();
-        clownFish.fly();
-        clownFish.sing();
-        clownFish.swim();
-        clownFish.size();
-        clownFish.colour();
-        clownFish.makeJokes();
-        clownFish.eat();
+        Fish clownfish = new Clownfish();
+        clownfish.walk();
+        clownfish.fly();
+        clownfish.sing();
+        clownfish.swim();
+        clownfish.size();
+        clownfish.colour();
+        clownfish.makeJokes();
+        clownfish.eat();
         System.out.println("--------------Dolphin--------------");
         Dolphin dolphin= new Dolphin();
         dolphin.hasFishBehaviour(new Shark());
@@ -99,5 +99,40 @@ public class Solution {
         caterpillar.fly();
         caterpillar.sing();
         caterpillar.swim();
+        System.out.println("--------------AnimalCount--------------");
+        Animal[] animals = new Animal[]{
+                new Bird(),
+                new Duck(),
+                new Chicken(),
+                new Rooster(),
+                new Parrot(),
+                new Shark(),
+                new Clownfish(),
+                new Dog(),
+                new Butterfly(),
+                new Cat()
+        };
+        int flyCount = 0, walkCount = 0, singCount = 0, swimCount = 0;
+        for(Animal animal: animals){
+            System.out.println(animal.getClass().getName());
+            System.out.println("--------------CountStart--------------");
+            if(animal.fly()){
+                flyCount++;
+            }
+            if(animal.walk()){
+                walkCount++;
+            }
+            if(animal.sing()){
+                singCount++;
+            }
+            if(animal.swim()){
+                swimCount++;
+            }
+            System.out.println("--------------CountEnd--------------");
+        }
+        System.out.println("Number of Animals that can fly: " + flyCount);
+        System.out.println("Number of Animals that can walk: " + walkCount);
+        System.out.println("Number of Animals that can sing: " + singCount);
+        System.out.println("Number of Animals that can swim: " + swimCount);
     }
 }

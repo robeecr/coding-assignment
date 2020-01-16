@@ -178,7 +178,7 @@ class SolutionTest {
         assertEquals("I cannot walk\nI am flying\nI cannot sing\nI cannot swim\n", outContent.toString());
     }
     @Test
-    public void caterpillarest(){
+    public void caterpillarTest(){
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 

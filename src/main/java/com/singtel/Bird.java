@@ -2,15 +2,23 @@ package main.java.com.singtel;
 
 public class Bird implements Animal {
     @Override
-    public void walk() {
+    public boolean walk() {
         System.out.println("I am walking");
+        return true;
     }
     @Override
-    public void fly() {
+    public boolean fly() {
         System.out.println("I am flying");
+        return true;
     }
     @Override
-    public void sing() {
+    public boolean sing() {
         System.out.println("I am singing");
+        return true;
+    }
+    @Override
+    public boolean swim() {
+        System.out.println("I am swimming");
+        return true;
     }
 }
